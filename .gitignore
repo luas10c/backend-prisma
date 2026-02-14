@@ -1,0 +1,11 @@
+node_modules
+
+dist
+
+.eslintcache
+
+src/database/generated
+
+.env*
+!.env.example
+.vercel

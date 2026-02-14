@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client"
+  output   = "./generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Fact {
+  id         String    @id
+  content    String
+  source     String?
+  categoryId String    @map("category_id")
+  updatedAt  DateTime? @map("updated_at")
+  createdAt  DateTime  @map("created_at")
+
+  @@map("tb_facts")
+}
